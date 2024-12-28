@@ -1,0 +1,156 @@
+<html>
+<head>
+    <title>Family Collection</title>
+    <style>
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5vh;
+            padding-top: 30px;
+            margin-top: 50px; /* Adds space between .product-list and the section above */
+        }
+        h2 {
+            font-size: 3em;
+            margin-bottom: 30px; /* Adds space below the heading */
+            text-shadow: 4px 4px 4px rgba(37, 9, 9, 0.5); /* Add shadow effect */
+            color: #333; /* Ensure the text is visible */
+            text-align: center; /* Centers the heading */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px; /* Adds spacing inside the container */
+            margin: 50px auto; /* Centers the container and adds outer space */
+            width: 80%; /* Ensures consistent width */
+        }
+        .pr {
+            width: 500px;
+            height: auto;
+            justify-content: center;
+            margin-bottom: 50px; /* Adds space below the .pr section */
+            padding-top: 30px;
+        }
+        .pr img {
+            width: 100%; /* Ensures image fits within the container */
+            height: auto; /* Maintains aspect ratio */
+        }
+        .pr h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .pr p {
+            padding: 0 10px 10px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .product img {
+            width: 100%;
+            height: 450px;
+        }
+        .product h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+        }
+        .product p {
+            padding: 0 10px 10px;
+        }
+        .product-quantity {
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    font-size: 1em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>HABESHA</h2>
+        <div class="pr">
+            <img src="f3.jpg" alt="Formal Suit">
+            <h3>Formal Suits</h3>
+            <p>Size S, M, L, XL, XXL</p>
+            <select name="quantity" class="product-quantity">
+                <option value aria-placeholder="">check price</option>
+                <option value="2">2 Pieces-20,000br</option>
+                <option value="3">3 Pieces-25,000br</option>
+                <option value="4">4 Pieces-32,000br</option>
+                <option value="5">above</option>
+            </select>
+            
+        </div>
+        <div class="product-list">
+            <div class="product">
+                <img src="f1.jpg" alt="Formal Suit">
+                <h3>Formal Suits</h3>
+                <p>Size S, M, L, XL, XXL</p>
+                <select name="quantity" class="product-quantity">
+                    <option value aria-placeholder="">check price</option>
+                    <option value="2">2 Pieces-15,000br</option>
+                    <option value="3">3 Pieces-25,000br</option>
+                    <option value="5">above</option>
+                </select>
+            </div>
+            <div class="product">
+                <img src="f2.jpg" alt="Casual Suit">
+                <h3>Casual Suits</h3>
+                <p>Size S, M, L</p>
+                <select name="quantity" class="product-quantity">
+                    <option value aria-placeholder="">check price</option>
+                    <option value="2">2 Pieces-12,000br</option>
+                    <option value="3">3 Pieces-23,000br</option>
+                    <option value="4">4 Pieces-30,000br</option>
+                    <option value="5">above</option>
+                </select>
+            </div>
+            <div class="product">
+                <img src="f4.jpg" alt="Classic Suit">
+                <h3>Classic Suit</h3>
+                <p>Size S, M, L</p>
+                 <select name="quantity" class="product-quantity">
+                    <option value aria-placeholder="">check price</option>
+                    <option value="2">2 Pieces-15,000br</option>
+                    <option value="3">3 Pieces-24,000br</option>
+                    <option value="4">4 Pieces-36,000br</option>
+                    <option value="5">above</option>
+                </select>
+            </div>
+            <div class="product">
+                <img src="f5.jpg" alt="Modern Fit Suit">
+                <h3>Available Sizes S, M, L</h3>
+                <p>$349</p>
+                <select name="quantity" class="product-quantity">
+                    <option value aria-placeholder="">check price</option>
+                    <option value="2">2 Pieces-12,000br</option>
+                    <option value="3">3 Pieces-23,000br</option>
+                    <option value="4">4 Pieces-30,000br</option>
+                    <option value="5">above</option>
+                </select>
+            </div>
+            <div class="product">
+                <img src="f6.jpg" alt="Slim Fit Suit">
+                 <h3>Available Sizes S, M, L,x</h3>
+                 <p>$349</p>
+                 <select name="quantity" class="product-quantity">
+                    <option value aria-placeholder="">check price</option>
+                    <option value="2">2 Pieces-12,000br</option>
+                    <option value="3">3 Pieces-23,000br</option>
+                    <option value="4">4 Pieces-30,000br</option>
+                    <option value="5">above</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

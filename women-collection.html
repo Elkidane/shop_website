@@ -1,0 +1,224 @@
+<html>
+    <body>
+    <head>
+        <title> women-collection</title>
+        <style>
+            .product-list {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 5vh;
+              padding-top: 30px;
+
+}
+h2 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 4px 4px 4px rgba(37, 9, 9, 0.5); /* Add shadow effect */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+            nav ul li {
+                display: inline;
+            }
+
+                nav ul li a {
+                    font-size: 30px;
+                    padding: 10px 15px; /* Add padding for better spacing */
+                    transition: background-color 0.3s, color 0.3s; 
+                    color: #fff;
+                    text-decoration: none;
+                }
+                nav ul li a:hover {
+                    background-color: #555; /* Change background color on hover */
+                    color: #fff; /* Ensure text color contrasts well */
+                    border-radius: 5px; /* Optional: Adds a rounded effect */
+                    }
+        .header {
+    display: flex;
+    align-items: center; /* Aligns the text and image vertically */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 20px; /* Adds space between the text and the image */
+    margin-bottom: 30px; /* Adds space below the header section */
+}
+
+.header-image {
+    width: 150px; /* Adjusts the width of the image */
+    height: 100px; /* Adjusts the height of the image to make it rectangular */
+    object-fit: cover; /* Ensures the image fits within the dimensions without distortion */
+    border: 1px solid #ccc; /* Optional border for styling */
+    border-radius: 5px; /* Optional rounded corners */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200vh;
+    margin: 150px;
+}
+.product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+.product img {
+                width: 100%;
+                height: 450px;
+            }
+            .product h3 {
+                margin: 0;
+                padding: 10px;
+                background-color: #f4f4f4;
+            }
+
+            .product p {
+                padding: 0 10px 10px;
+            }
+  /* Button Styles */
+  .add-to-cart-btn {
+        background-color: #212428; /* Blue background color */
+        color: #fff; /* White text color */
+        padding: 16px 25px; /* Padding around the text */
+        border: none; /* Remove border */
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer; /* Show pointer cursor on hover */
+        margin-top: 10px; /* Add space above the button */
+        justify-content: end;
+    }
+
+    .add-to-cart-btn:hover {
+        background-color: #041d37; /* Darker blue on hover */
+    }
+
+    /* Quantity Input Styles */
+    .quantity-input {
+        width: 100px; /* Set width of the input field */
+        padding: 10px; /* Padding inside the input field */
+        margin-left: 130px; /* Add space to the left of the input field */
+        margin-right: 2px; /* Add space to the right of the input field */
+        font-size:larger;
+    }
+
+        </style>
+    </head>
+    <header>
+        <h1>HABESHAWI</h1>
+        <nav>
+            <ul>
+                <li><a href="shop.html">Back</a></li>
+                <li><a href="men-collection.html">Next</a></li>
+
+                </ul>
+               </header>
+    <div class="container">
+    <h2>HABESHAWIT</h2>
+    <img src="wo.jpg" alt="Logo" class="header-image">
+    <div class="product-list">
+        <!-- Ensure only 6 items are displayed in 3 columns and 2 rows -->
+        <div class="product">
+            <img src="w1.jpg" alt="Formal Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w2.jpg" alt="Casual Suit">
+            <h3>Casual Suits</h3>
+            <p>size S,,M,L</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w3.jpg" alt="Custom Suit">
+            <h3>Custom Suits</h3>
+            <p>Size S,,M,L</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w4.jpg" alt="Classic Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w5.jpg" alt="Modern Fit Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w6.jpg" alt="Slim Fit Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w10.jpg" alt="Formal Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+
+        </div>
+        <div class="product">
+            <img src="w8.jpg" alt="Formal Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="w9.jpg" alt="Formal Suit">
+            <h3>Formal Suits</h3>
+            <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+   
+</div>
+<script>
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            let item = this.parentNode.querySelector('h3').textContent;
+            let quantity = parseInt(this.parentNode.querySelector('.quantity-input').value);
+
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            let existingItem = cartItems.find(cartItem => cartItem.item === item);
+
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cartItems.push({ item: item, quantity: quantity });
+            }
+            alert('Item added to cart: ' + item + ' (Quantity: ' + quantity + ')');
+        
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Habesha clothing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            height: 50px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header h1 {
+                margin: 0;
+            }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+            nav ul li {
+                display: inline;
+            }
+
+                nav ul li a {
+                    font-size: 30px;
+                    padding: 10px 15px; /* Add padding for better spacing */
+                    transition: background-color 0.3s, color 0.3s; 
+                    color: #fff;
+                    text-decoration: none;
+                }
+                nav ul li a:hover {
+                    background-color: #555; /* Change background color on hover */
+                    color: #fff; /* Ensure text color contrasts well */
+                    border-radius: 5px; /* Optional: Adds a rounded effect */
+                    }
+
+                .hero {
+                 background-image: url('main.jpeg');
+                 background-size: cover;
+                 background-position: center;
+                 color: white;
+                height: 680px;
+                width: 1600px;
+                 text-align: center;
+                padding: 100px 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                 align-items: center;
+}
+
+        
+
+            .hero h2 {
+                font-size: 2.5em;
+                margin: 0;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .product a{
+            color:#333;
+            text-decoration: none;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+            .product img {
+                width: 100%;
+                height: 550px;
+            }
+
+            .product h3 {
+                margin: 0;
+                padding: 5px;
+                background-color: #f4f4f4;
+            }
+
+            .product p {
+                padding: 0 10px 10px;
+            }
+            .about-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 100%;
+          padding: 0 20px;
+        }
+        .about-section img {
+            max-width: 500px;
+            border-radius: 10px;
+        }
+        .container h2 {
+            font-size: 3em;
+            text-shadow: 4px 4px 4px rgba(37, 9, 9, 0.5); 
+}
+        .about-content {
+            font-size: large;
+            flex: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+        .contact-container {
+            display:flex;
+            height:100vh
+  /* Add spacing to the left and right sides */
+                 }
+
+      .contact-links {
+             flex: 1;
+             margin-top: 50px;
+             padding: 20px;
+                  }
+
+.contact-links a {
+    display: block;
+  margin-bottom: 10px;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #1d1818;
+  border-radius: 5px;
+}
+
+.contact-form {
+  flex: 2;
+  padding: 10px; /* Decrease padding to make the form smaller */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+  margin: 20px; /* Add spacing around the form */
+  max-width: 500px; /* Set a maximum width for the form */
+  width: 100%; /* Ensure the form fills the available space */
+}
+
+.contact-form h2 {
+    font-size: 3em;
+    text-shadow: 4px 4px 4px rgba(37, 9, 9, 0.5); 
+    margin:20px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  display: block;
+  margin:0;
+  width: 70%;
+  padding: 15px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #555;
+}
+i.fab.fa-instagram {
+  color: #405DE6; /* Set the color of the Instagram icon */
+  font-size: 24px; /* Set the size of the Instagram icon */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HABESHAWI</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#" id="shop-link">Shop</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <button id="view-cart-btn">View Cart</button>
+            </ul>
+           
+<ul id="collection-list" style="display: none; position: absolute; top: 50px; right: 10px; background: #140c0c; padding: 10px;">
+    <li><a href="women-collection.html" style="display: block; padding: 5px;"">Women's Collection</a></li>
+    <li><a href="men-collection.html"style="display: block; padding: 5px;"">Men's Collection</a></li>
+    <li><a href="family-collection.html"style="display: block; padding: 5px;"">Family Collection</a></li>
+</ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h2>Embrace Tradition, Celebrate Style</h2>
+        <p>Elegance and Style, Tailored Just for You</p>
+    </section>
+
+    <div class="container">
+        <h2>Our Collection</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="women.jpg" alt="Habesha dress">
+                <h3><a href="women-collection.html">Habesha dress</a></h3>
+                <p>2,000-15,000br</p>
+            </div>
+            <div class="product">
+                <img src="men.jpg" alt="Men clothing">
+                <h3><a href="men-collection.html">Men clothing</a></h3>
+                <p>1,500-7,000br</p>
+            </div>
+            <div class="product">
+                <img src="family.jpg" alt="family habesha cloth">
+                <h3><a href="family-collection.html"> family habesha cloth</a></h3>
+                <p>7,000-20,00br</p>
+            </div>
+        </div>
+    </div>
+    <section id="About" >
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-section">
+                <img src="a1.jpg" alt="About Us Image">
+                <div class="about-content">
+                    <p>Welcome to Habesha Clothing, your destination for traditional Ethiopian attire with a modern twist. Our passion for preserving the rich cultural heritage of Ethiopia drives us to create unique and stylish clothing that celebrates tradition and elegance.</p>
+                    <p>At Habesha Clothing, we blend traditional craftsmanship with contemporary designs to offer you a diverse collection of Habesha dresses, men's clothing, and family attire. Each piece is meticulously crafted to reflect the beauty and authenticity of Ethiopian culture.</p>
+                    <p>Our commitment to quality, craftsmanship, and customer satisfaction sets us apart. Whether you are looking for a special outfit for a cultural event or simply want to embrace the beauty of Ethiopian fashion in your daily life, we have something for everyone.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+  <section id="Contact">
+    
+    <div class="container">
+    <h2>Contact Us</h2>
+
+<div class="contact-container">
+  <div class="contact-links">
+    <a href="mailto:elshadaykidane4@gmail.com">Email </a>us
+    <a href="tel:+1234567890">Call us</a>
+
+    <i class="fab fa-instagram"></i>
+  </div>
+
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+    <form action="#" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+</div>
+  </section>
+    <footer>
+        <p>&copy; 2024 habesha cloth Shop. All rights reserved.</p>
+    </footer>
+    <script>
+ var collectionList = document.getElementById('collection-list');
+var shopLink = document.getElementById('shop-link');
+
+shopLink.addEventListener('click', function() {
+    if (collectionList.style.display === 'none') {
+        collectionList.style.display = 'block';
+    } else {
+        collectionList.style.display = 'none';
+    }
+});
+
+        // Initialize cartItems in localStorage if not already set
+        if (!localStorage.getItem('cartItems')) {
+            localStorage.setItem('cartItems', JSON.stringify([]));
+        }
+
+        document.getElementById('view-cart-btn').addEventListener('click', function() {
+            let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+
+            if (cartItems.length > 0) {
+                let cartSummary = cartItems.map(item => item.item + ' (Quantity: ' + item.quantity + ')').join(', ');
+                alert('Items in Cart: ' + cartSummary);
+            } else {
+                alert('Your cart is empty');
+            }
+        });
+    </script>
+</body>
