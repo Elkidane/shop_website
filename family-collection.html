@@ -16,6 +16,39 @@
             color: #333; /* Ensure the text is visible */
             text-align: center; /* Centers the heading */
         }
+        header {
+            background-color: #333;
+            color: #fff;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+            nav ul li {
+                display: inline;
+            }
+
+                nav ul li a {
+                    font-size: 30px;
+                    padding: 10px 15px; /* Add padding for better spacing */
+                    transition: background-color 0.3s, color 0.3s; 
+                    color: #fff;
+                    text-decoration: none;
+                }
+                nav ul li a:hover {
+                    background-color: #555; /* Change background color on hover */
+                    color: #fff; /* Ensure text color contrasts well */
+                    border-radius: 5px; /* Optional: Adds a rounded effect */
+                    }
         .container {
             display: flex;
             flex-direction: column;
@@ -71,9 +104,40 @@
     background-color: #f4f4f4;
     font-size: 1em;
 }
+.add-to-cart-btn {
+        background-color: #212428; /* Blue background color */
+        color: #fff; /* White text color */
+        padding: 16px 25px; /* Padding around the text */
+        border: none; /* Remove border */
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer; /* Show pointer cursor on hover */
+        margin-top: 10px; /* Add space above the button */
+        justify-content: end;
+    }
+
+    .add-to-cart-btn:hover {
+        background-color: #041d37; /* Darker blue on hover */
+    }
+
+    /* Quantity Input Styles */
+    .quantity-input {
+        width: 100px; /* Set width of the input field */
+        padding: 10px; /* Padding inside the input field */
+        margin-left: 130px; /* Add space to the left of the input field */
+        margin-right: 2px; /* Add space to the right of the input field */
+        font-size:larger;
+    }
 
     </style>
 </head>
+<header>
+    <h1>HABESHA</h1>
+    <nav>
+        <ul>
+            <li><a href="shop.html">Back</a></li>
+
+            </ul>
+           </header>
 <body>
     <div class="container">
         <h2>HABESHA</h2>
@@ -87,6 +151,8 @@
                 <option value="3">3 Pieces-25,000br</option>
                 <option value="4">4 Pieces-32,000br</option>
                 <option value="5">above</option>
+                <input type="number" class="quantity-input" value="1" min="1">
+                <button class="add-to-cart-btn">Add to Cart</button>
             </select>
             
         </div>
@@ -100,6 +166,8 @@
                     <option value="2">2 Pieces-15,000br</option>
                     <option value="3">3 Pieces-25,000br</option>
                     <option value="5">above</option>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Add to Cart</button>
                 </select>
             </div>
             <div class="product">
@@ -112,6 +180,8 @@
                     <option value="3">3 Pieces-23,000br</option>
                     <option value="4">4 Pieces-30,000br</option>
                     <option value="5">above</option>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Add to Cart</button>
                 </select>
             </div>
             <div class="product">
@@ -124,6 +194,8 @@
                     <option value="3">3 Pieces-24,000br</option>
                     <option value="4">4 Pieces-36,000br</option>
                     <option value="5">above</option>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Add to Cart</button>
                 </select>
             </div>
             <div class="product">
@@ -136,6 +208,8 @@
                     <option value="3">3 Pieces-23,000br</option>
                     <option value="4">4 Pieces-30,000br</option>
                     <option value="5">above</option>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Add to Cart</button>
                 </select>
             </div>
             <div class="product">
@@ -148,6 +222,8 @@
                     <option value="3">3 Pieces-23,000br</option>
                     <option value="4">4 Pieces-30,000br</option>
                     <option value="5">above</option>
+                    <input type="number" class="quantity-input" value="1" min="1">
+                    <button class="add-to-cart-btn">Add to Cart</button>
                 </select>
             </div>
         </div>

@@ -166,13 +166,15 @@
 
 .contact-form {
   flex: 2;
-  padding: 10px; /* Decrease padding to make the form smaller */
+  padding: 60px; /* Decrease padding to make the form smaller */
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
   margin: 20px; /* Add spacing around the form */
   max-width: 500px; /* Set a maximum width for the form */
+  height:600px;
   width: 100%; /* Ensure the form fills the available space */
+  background-image: url(back.jpg);
 }
 
 .contact-form h2 {
@@ -185,21 +187,25 @@
 .contact-form label {
   display: block;
   margin-top: 10px;
+  font-size:1.5em;
 }
 
 .contact-form input,
 .contact-form textarea {
-  width: 80%;
+  width: 60%;
   padding: 8px;
   margin-top: 5px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.1);
+  border: 1px solid #beb6b6;
   border-radius: 5px;
+  justify-content: center;
 }
 
 .contact-form button {
   display: block;
-  margin:0;
+  margin-left:100px;
+  padding: 8px;
   width: 70%;
   padding: 15px;
   background-color: #555;
@@ -212,10 +218,7 @@
 .contact-form button:hover {
   background-color: #555;
 }
-i.fab.fa-instagram {
-  color: #405DE6; /* Set the color of the Instagram icon */
-  font-size: 24px; /* Set the size of the Instagram icon */
-}
+
     </style>
 </head>
 <body>
@@ -284,10 +287,10 @@ i.fab.fa-instagram {
 
 <div class="contact-container">
   <div class="contact-links">
-    <a href="mailto:elshadaykidane4@gmail.com">Email </a>us
-    <a href="tel:+1234567890">Call us</a>
+    <a href="mailto:someone@gmail.com">Email us </a>
+    <a href="tel:+1234567890"> Call us</a>
+    <a> location</a>
 
-    <i class="fab fa-instagram"></i>
   </div>
 
   <div class="contact-form">
@@ -302,7 +305,7 @@ i.fab.fa-instagram {
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit" style="font-size: 30px;">Send Message</button>
     </form>
   </div>
 </div>

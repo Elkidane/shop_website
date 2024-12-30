@@ -81,6 +81,29 @@ h2 {
             .product p {
                 padding: 0 10px 10px;
             }
+            .add-to-cart-btn {
+        background-color: #212428; /* Blue background color */
+        color: #fff; /* White text color */
+        padding: 16px 25px; /* Padding around the text */
+        border: none; /* Remove border */
+        border-radius: 8px; /* Rounded corners */
+        cursor: pointer; /* Show pointer cursor on hover */
+        margin-top: 10px; /* Add space above the button */
+        justify-content: end;
+    }
+
+    .add-to-cart-btn:hover {
+        background-color: #041d37; /* Darker blue on hover */
+    }
+
+    /* Quantity Input Styles */
+    .quantity-input {
+        width: 100px; /* Set width of the input field */
+        padding: 10px; /* Padding inside the input field */
+        margin-left: 130px; /* Add space to the left of the input field */
+        margin-right: 2px; /* Add space to the right of the input field */
+        font-size:larger;
+    }
 
 
         </style>
@@ -102,31 +125,43 @@ h2 {
             <img src="m1.jpg" alt="Formal Suit">
             <h3>Formal Suits</h3>
             <p>size S,M L,XL,XXL</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="product">
             <img src="m2.jpg" alt="Casual Suit">
             <h3>Casual Suits</h3>
             <p>size S,,M,L</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="product">
             <img src="m3.jpg" alt="Custom Suit">
             <h3>Custom Suits</h3>
             <p>Size S,,M,L</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="product">
             <img src="m4.jpg" alt="Classic Suit">
             <h3>Classic Suit</h3>
             <p>Size S,,M,L</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="product">
             <img src="m5.jpg" alt="Modern Fit Suit">
             <h3>Size S,,M,L/h3>
             <p>$349</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
         <div class="product">
             <img src="m6.jpg" alt="Slim Fit Suit">
             <h3>Size S,,M,L/h3>
             <p>$399</p>
+            <input type="number" class="quantity-input" value="1" min="1">
+            <button class="add-to-cart-btn">Add to Cart</button>
         </div>
     </div>
 </div>
