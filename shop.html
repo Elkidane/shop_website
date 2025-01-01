@@ -40,13 +40,14 @@
                 display: inline;
             }
 
-                nav ul li a {
+                nav ul li a{
                     font-size: 30px;
                     padding: 10px 15px; /* Add padding for better spacing */
                     transition: background-color 0.3s, color 0.3s; 
                     color: #fff;
                     text-decoration: none;
                 }
+            
                 nav ul li a:hover {
                     background-color: #555; /* Change background color on hover */
                     color: #fff; /* Ensure text color contrasts well */
@@ -57,10 +58,10 @@
                  background-image: url('main.jpeg');
                  background-size: cover;
                  background-position: center;
-                 color: white;
+                 color: rgb(215, 207, 207);
                 height: 680px;
                 width: 1600px;
-                 text-align: center;
+                  text-align: right;
                 padding: 100px 20px;
                 display: flex;
                 flex-direction: column;
@@ -144,25 +145,35 @@
             padding: 10px 20px;
         }
         .contact-container {
-            display:flex;
-            height:100vh
-  /* Add spacing to the left and right sides */
-                 }
-
-      .contact-links {
-             flex: 1;
-             margin-top: 50px;
-             padding: 20px;
-                  }
-
-.contact-links a {
-    display: block;
-  margin-bottom: 10px;
-  padding: 8px 10px;
-  text-decoration: none;
-  color: #1d1818;
-  border-radius: 5px;
+  display: flex;
+  height: 100vh;
 }
+
+.contact-links {
+  flex: 1;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.contact-links a, 
+.contact-links div {
+  display: flex; /* Use Flexbox to align items horizontally */
+  align-items: center; /* Vertically align the image and text */
+  margin-bottom: 15px; /* Add spacing between items */
+  text-decoration: none; /* Remove underline for links */
+  color: #1d1818; /* Text color */
+}
+
+.contact-links img {
+  width: 70px; /* Adjust icon size */
+  height: 70px; /* Maintain square aspect ratio */
+  margin-right: 15px; /* Add spacing between the image and text */
+}
+
+.contact-links h3 {
+  margin: 0; /* Remove default margin from headings */
+}
+
 
 .contact-form {
   flex: 2;
@@ -226,11 +237,11 @@
         <h1>HABESHAWI</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+            <li><a href="#home"> <i class="fas fa-home" style="font-size: 30px; "></i></a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#" id="shop-link">Shop</a></li>
                 <li><a href="#Contact">Contact</a></li>
-                <button id="view-cart-btn">View Cart</button>
+               <li> <a id="view-cart-btn">View Cart</a></li>
             </ul>
            
 <ul id="collection-list" style="display: none; position: absolute; top: 50px; right: 10px; background: #140c0c; padding: 10px;">
@@ -287,9 +298,10 @@
 
 <div class="contact-container">
   <div class="contact-links">
-    <a href="mailto:someone@gmail.com">Email us </a>
-    <a href="tel:+1234567890"> Call us</a>
-    <a> location</a>
+    <a href="mailto:someone@gmail.com"><img src=email.png > <h3>E-mail  us</h3> </a>
+    <a href="tel:+123456789"><img src=phone.png><h3> Call us</h3></a>
+   <a href="https://www.instagram.com/habesha_cloth_design"><img src=insta.png><h3>Follow us on Instagram</h3></a>
+   <a> <img src="location.png"><h3>location: Ethiopia,Addis Abeba</h3> </a>
 
   </div>
 
