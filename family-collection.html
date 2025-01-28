@@ -4,12 +4,18 @@
     <title>Family Collection</title>
     <style>
         .product-list {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5vh;
-            padding-top: 30px;
-            margin-top: 50px; /* Adds space between .product-list and the section above */
-        }
+    display: grid;
+   grid-template-columns: repeat(3, 1fr);
+    gap: 5vh;
+    padding-top: 30px;
+    margin-top: 50px; /* Adds space between .product-list and the section above */
+}
+
+@media (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
         h2 {
             font-size: 3em;
             margin-bottom: 30px; /* Adds space below the heading */
@@ -145,7 +151,7 @@
         <h2>HABESHA</h2>
         <div class="pr">
             <img src="f3.jpg" alt="Formal Suit">
-            <h3>Formal Suits</h3>
+            <h3>ocassional family-collection</h3>
             <p>Size S, M, L, XL, XXL</p>
             <select name="quantity" class="product-quantity">
                 <option value aria-placeholder="">check price</option>
@@ -161,7 +167,7 @@
         <div class="product-list">
             <div class="product">
                 <img src="f1.jpg" alt="Formal Suit">
-                <h3>Formal Suits</h3>
+                <h3>Formal family-collection</h3>
                 <p>Size S, M, L, XL, XXL</p>
                 <select name="quantity" class="product-quantity">
                     <option value aria-placeholder="">check price</option>
@@ -174,7 +180,7 @@
             </div>
             <div class="product">
                 <img src="f2.jpg" alt="Casual Suit">
-                <h3>Casual Suits</h3>
+                <h3>Casual family-collection</h3>
                 <p>Size S, M, L</p>
                 <select name="quantity" class="product-quantity">
                     <option value aria-placeholder="">check price</option>
@@ -188,7 +194,7 @@
             </div>
             <div class="product">
                 <img src="f4.jpg" alt="Classic Suit">
-                <h3>Classic Suit</h3>
+                <h3>Classic family-collection</h3>
                 <p>Size S, M, L</p>
                  <select name="quantity" class="product-quantity">
                     <option value aria-placeholder="">check price</option>
@@ -202,8 +208,8 @@
             </div>
             <div class="product">
                 <img src="f5.jpg" alt="Modern Fit Suit">
-                <h3>Available Sizes S, M, L</h3>
-                <p>$349</p>
+                <h3>Modern family-collection</h3>
+                <p>Available Sizes S, M, L</p>
                 <select name="quantity" class="product-quantity">
                     <option value aria-placeholder="">check price</option>
                     <option value="2">2 Pieces-12,000br</option>
@@ -216,8 +222,8 @@
             </div>
             <div class="product">
                 <img src="f6.jpg" alt="Slim Fit Suit">
-                 <h3>Available Sizes S, M, L,x</h3>
-                 <p>$349</p>
+                <h3>shema family-collection</h3>
+                 <p>Available Sizes S, M, L,x</p>
                  <select name="quantity" class="product-quantity">
                     <option value aria-placeholder="">check price</option>
                     <option value="2">2 Pieces-12,000br</option>

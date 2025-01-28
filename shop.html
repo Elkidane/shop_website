@@ -55,12 +55,12 @@
                     }
 
                 .hero {
-                 background-image: url('main.jpeg');
+                           background-image: url('main.jpeg');
                  background-size: cover;
                  background-position: center;
                  color: rgb(215, 207, 207);
                 height: 680px;
-                width: 1600px;
+                width: 110vw;
                   text-align: right;
                 padding: 100px 20px;
                 display: flex;
@@ -102,8 +102,11 @@
             border-radius: 5px;
             overflow: hidden;
             background-color: #fff;
+            transition: transform 0.3s;
         }
-
+        .motion {
+    transform: scale(1.1);
+}
             .product img {
                 width: 100%;
                 height: 550px;
@@ -126,9 +129,12 @@
           padding: 0 20px;
         }
         .about-section img {
-            max-width: 500px;
-            border-radius: 10px;
-        }
+    max-width: 500px;
+    border-radius: 10px;
+   
+}
+
+
         .container h2 {
             font-size: 3em;
             text-shadow: 4px 4px 4px rgba(37, 9, 9, 0.5); 
@@ -241,7 +247,7 @@
                 <li><a href="#About">About</a></li>
                 <li><a href="#" id="shop-link">Shop</a></li>
                 <li><a href="#Contact">Contact</a></li>
-               <li> <a id="view-cart-btn">View Cart</a></li>
+               <li> <a id="view-cart-btn"href="cart.php" >View Cart</a></li>
             </ul>
            
 <ul id="collection-list" style="display: none; position: absolute; top: 50px; right: 10px; background: #140c0c; padding: 10px;">
@@ -260,17 +266,17 @@
     <div class="container">
         <h2>Our Collection</h2>
         <div class="product-list">
-            <div class="product">
+            <div class="product" onmouseover="addMotion(this)" onmouseout="removeMotion(this)">
                 <img src="women.jpg" alt="Habesha dress">
                 <h3><a href="women-collection.html">Habesha dress</a></h3>
                 <p>2,000-15,000br</p>
             </div>
-            <div class="product">
+            <div class="product"onmouseover="addMotion(this)" onmouseout="removeMotion(this)">
                 <img src="men.jpg" alt="Men clothing">
                 <h3><a href="men-collection.html">Men clothing</a></h3>
                 <p>1,500-7,000br</p>
             </div>
-            <div class="product">
+            <div class="product"onmouseover="addMotion(this)" onmouseout="removeMotion(this)">
                 <img src="family.jpg" alt="family habesha cloth">
                 <h3><a href="family-collection.html"> family habesha cloth</a></h3>
                 <p>7,000-20,00br</p>
@@ -298,9 +304,9 @@
 
 <div class="contact-container">
   <div class="contact-links">
-    <a href="mailto:someone@gmail.com"><img src=email.png > <h3>E-mail  us</h3> </a>
-    <a href="tel:+123456789"><img src=phone.png><h3> Call us</h3></a>
-   <a href="https://www.instagram.com/habesha_cloth_design"><img src=insta.png><h3>Follow us on Instagram</h3></a>
+    <a href="mailto:someone@gmail.com" onmouseover="addMotion(this)" onmouseout="removeMotion(this)"><img src=email.png > <h3>E-mail  us</h3> </a>
+    <a href="tel:+123456789"onmouseover="addMotion(this)" onmouseout="removeMotion(this)"><img src=phone.png><h3> Call us</h3></a>
+   <a href="https://www.instagram.com/habesha_cloth_design"onmouseover="addMotion(this)" onmouseout="removeMotion(this)"><img src=insta.png><h3>Follow us on Instagram</h3></a>
    <a> <img src="location.png"><h3>location: Ethiopia,Addis Abeba</h3> </a>
 
   </div>
@@ -317,7 +323,7 @@
       <label for="message">Message:</label>
       <textarea id="message" name="message" rows="4" required></textarea>
 
-      <button type="submit" style="font-size: 30px;">Send Message</button>
+      <button type="submit" style="font-size: 30px;"onmouseover="addMotion(this)" onmouseout="removeMotion(this)">Send Message</button>
     </form>
   </div>
 </div>
@@ -327,6 +333,14 @@
         <p>&copy; 2024 habesha cloth Shop. All rights reserved.</p>
     </footer>
     <script>
+
+function addMotion(element) {
+    element.classList.add('motion');
+}
+
+function removeMotion(element) {
+    element.classList.remove('motion');
+}
  var collectionList = document.getElementById('collection-list');
 var shopLink = document.getElementById('shop-link');
 
@@ -338,20 +352,59 @@ shopLink.addEventListener('click', function() {
     }
 });
 
-        // Initialize cartItems in localStorage if not already set
-        if (!localStorage.getItem('cartItems')) {
-            localStorage.setItem('cartItems', JSON.stringify([]));
-        }
+         // Initialize cartItems in localStorage if not already set
+    if (!localStorage.getItem('cartItems')) {
+        localStorage.setItem('cartItems', JSON.stringify([]));
+    }
 
-        document.getElementById('view-cart-btn').addEventListener('click', function() {
-            let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+    // Add items to the cart
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            let product = this.closest('.product');
+            let itemName = product.getAttribute('data-name');
+            let itemImage = product.getAttribute('data-image');
+            let itemPrice = parseFloat(product.getAttribute('data-price'));
+            let itemSize = product.getAttribute('data-size');
+          
+            let quantity = parseInt(product.querySelector('.quantity-input').value);
+              // Get current cart items
+            let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
-            if (cartItems.length > 0) {
-                let cartSummary = cartItems.map(item => item.item + ' (Quantity: ' + item.quantity + ')').join(', ');
-                alert('Items in Cart: ' + cartSummary);
+            // Check if the item already exists in the cart
+            let existingItem = cartItems.find(item => item.itemName === itemName && item.itemSize === itemSize);
+
+            if (existingItem) {
+                // Update quantity if item already exists
+                existingItem.quantity += quantity;
             } else {
-                alert('Your cart is empty');
+                // Add new item to the cart
+                cartItems.push({
+                    itemName,
+                    itemImage,
+                    itemPrice,
+                    itemSize,
+                    quantity
+                });
             }
+
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            alert('Item added to cart!');
         });
+    });
+
+    // View cart summary
+    document.getElementById('view-cart-btn').addEventListener('click', function () {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    if (cartItems.length > 0) {
+        let cartSummary = cartItems.map(item => 
+            `${item.itemName} (Size: ${item.itemSize}, Quantity: ${item.quantity}, Price: ${item.itemPrice * item.quantity} ETB)`
+        ).join('\n');
+        alert('Items in Cart:\n' + cartSummary);
+    } else{
+        alert('Go to cart')
+    }
+});
+    
     </script>
 </body>

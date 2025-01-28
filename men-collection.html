@@ -10,6 +10,11 @@
               padding-top: 30px;
 
 }
+@media (max-width: 900px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
 h2 {
             font-size: 3em;
             margin: 0;
@@ -60,8 +65,8 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 150vh;
-    margin: 150px;
+    margin: 50px auto; /* Centers the container and adds outer space */
+    width: 80%; /* Ensures consistent width */
 }
 .product {
             border: 1px solid #ccc;
@@ -122,49 +127,112 @@ h2 {
     <h2>HABESHAWI</h2>
     <div class="product-list">
         <!-- Ensure only 6 items are displayed in 3 columns and 2 rows -->
-        <div class="product">
+                <div class="product"   data-id="1"data-name="Formal" data-image="m1.jpg" data-price="1500" >
             <img src="m1.jpg" alt="Formal Suit">
-            <h3>Formal Suits</h3>
+            <h3>Formal </h3>
             <p>size S,M L,XL,XXL</p>
+            <h3>price 1500ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="1">
+
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <div class="product">
+                <div class="product"   data-id="2"data-name="casual suit" data-image="m2.jpg" data-price="2500" >
             <img src="m2.jpg" alt="Casual Suit">
-            <h3>Casual Suits</h3>
+            <h3>Casual </h3>
             <p>size S,,M,L</p>
+            <h3>price 2500ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="2">
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <div class="product">
+                <div class="product"   data-id="3"data-name="Custom Suit" data-image="m3.jpg" data-price="34000" >
             <img src="m3.jpg" alt="Custom Suit">
-            <h3>Custom Suits</h3>
+            <h3>Custom </h3>
             <p>Size S,,M,L</p>
+            <h3>price 4000ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="3">
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <div class="product">
+                <div class="product"   data-id="4"data-name="classic Suit" data-image="m4.jpg" data-price="5500" >
             <img src="m4.jpg" alt="Classic Suit">
-            <h3>Classic Suit</h3>
+            <h3>Classic </h3>
             <p>Size S,,M,L</p>
+            <h3>price 5500ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="4">
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <div class="product">
+               <div class="product"   data-id="5"data-name="Modern Fit Suit" data-image="m5.jpg" data-price="5500" >
             <img src="m5.jpg" alt="Modern Fit Suit">
-            <h3>Size S,,M,L/h3>
-            <p>$349</p>
+            <h3>Classical</h3>
+            <p>Size S,,M,L</p>
+            <h3>price 5500ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="5">
+
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
-        <div class="product">
+                <div class="product"   data-id="6"data-name="slim Fit Suit" data-image="m6.jpg" data-price="7000" >
             <img src="m6.jpg" alt="Slim Fit Suit">
-            <h3>Size S,,M,L/h3>
-            <p>$399</p>
+            <h3>Shema</h3>
+            <p>Size S,,M,L</p>
+            <h3>price 7000ETB</h3>
             <input type="number" class="quantity-input" value="1" min="1">
+            <input type="hidden" name="product_id" value="6">
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
     </div>
 </div>
+<form id="cart-form" method="POST" action="cart.php" style="display:none;">
+    <input type="hidden" name="item_name" id="item_name">
+    <input type="hidden" name="item_image" id="item_image">
+    <input type="hidden" name="item_price" id="item_price">
+    <input type="hidden" name="quantity" id="quantity">
+</form>
+<script>
+  
+    document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', function () {
+        // Get the parent product container
+        const product = this.closest('.product');
+        if (!product) {
+            console.error("Product container not found!");
+            return;
+        }
 
+        // Get the quantity input field
+        const quantityInput = product.querySelector('.quantity-input');
+        if (!quantityInput || quantityInput.value <= 0) {
+            alert("Please enter a valid quantity.");
+            return;
+        }
+
+        // Get product-specific details from the clicked product's data attributes
+        const productName = product.getAttribute('data-name');
+        const productImage = product.getAttribute('data-image');
+        const productPrice = product.getAttribute('data-price');
+        const productQuantity = quantityInput.value;
+
+        // Dynamically create and submit the form
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'cart.php';
+
+        // Add hidden input fields for the product details
+        form.innerHTML = `
+            <input type="hidden" name="item_name" value="${productName}">
+            <input type="hidden" name="item_image" value="${productImage}">
+            <input type="hidden" name="item_price" value="${productPrice}">
+            <input type="hidden" name="quantity" value="${productQuantity}">
+        `;
+
+        // Append and submit the form
+        document.body.appendChild(form);
+        form.submit();
+    });
+});
+
+</script>
 </html>
